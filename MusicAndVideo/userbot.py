@@ -91,23 +91,17 @@ async def help(client, m: Message):
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
-<b>👋 Hallo {m.from_user.mention}!
+<b>👋 Hi! {m.from_user.mention}!
 
 🎶 Music Dan Video Player UserBot
 
 🤖 Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.
 
-✨ Dipersembahkan Oleh 
+✨ Supported by: 
 • [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
 • [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-
-📝 Persyaratan
-• Python 3.8+
-• FFMPEG
-• Nodejs v16+
-
-🛠 MENU BANTUAN
+🛠 Help Menu
 
 ⚡ PERINTAH UNTUK SEMUA ORANG
 • `/play [judul lagu | link youtube | balas file audio]` - untuk memutar lagu
@@ -122,21 +116,43 @@ async def repo(client, m: Message):
 • `/skip` - untuk melewati lagu atau video
 • `/end` - untuk mengakhiri pemutaran
 
-💡 Deployment
-
-💜 Heroku
-
- [𝗗𝗘𝗣𝗟𝗢𝗬 𝗞𝗘 𝗛𝗘𝗥𝗢𝗞𝗨](https://heroku.com/deploy?template=https://github.com/XtomiSN/MusicAndVideoPlayer)
-
-📚 Variabel Yang Dibutuhkan
-• `API_ID` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `API_HASH` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://replit.com/@GoodBoysExe/string-session?lite=1&outputonly=1)
-• `SUDO_USER` - ID Akun Telegram Yang Digunakan Sebagai Admin
+🔥 Deployment
+• [Heroku](https://github.com/zxcskyy)
 
 
-🔥 KREDIT 
-• [Dan](https://github.com/delivrance) untuk [Pyrogram](https://github.com/pyrogram/pyrogram)
-• [Laky](https://github.com/Laky-64) untuk [PyTgCalls](https://github.com/pytgcalls/pytgcalls)</b>
-"""
-    await m.reply(REPO, disable_web_page_preview=True)
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["sysinfo"], prefixes=f"{HNDLR}")
+async def give_sysinfo(client, message):
+    splatform = platform.system()
+    platform_release = platform.release()
+    platform_version = platform.version()
+    architecture = platform.machine()
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(socket.gethostname())
+    mac_address = ":".join(re.findall("..", "%012x" % uuid.getnode()))
+    processor = platform.processor()
+    ram = humanbytes(round(psutil.virtual_memory().total))
+    cpu_freq = psutil.cpu_freq().current
+    if cpu_freq >= 1000:
+        cpu_freq = f"{round(cpu_freq / 1000, 2)}GHz"
+    else:
+        cpu_freq = f"{round(cpu_freq, 2)}MHz"
+    du = psutil.disk_usage(client.workdir)
+    psutil.disk_io_counters()
+    disk = f"{humanbytes(du.used)} / {humanbytes(du.total)} " f"({du.percent}%)"
+    cpu_len = len(psutil.Process().cpu_affinity())
+    somsg = f"""**🖥 SYSTEM INFO**
+    
+**PlatForm :** `{splatform}`
+**PlatForm - Release :** `{platform_release}`
+**PlatFork - Version :** `{platform_version}`
+**Architecture :** `{architecture}`
+**Hostname :** `{hostname}`
+**IP :** `{ip_address}`
+**Mac :** `{mac_address}`
+**Processor :** `{processor}`
+**Ram : ** `{ram}`
+**CPU :** `{cpu_len}`
+**CPU FREQ :** `{cpu_freq}`
+**DISK :** `{disk}`
+    """
+    await message.reply(somsg)
