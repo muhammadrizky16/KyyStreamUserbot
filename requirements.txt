@@ -1,6 +1,6 @@
 TgCrypto
 git+https://github.com/pyrogram/pyrogram@master
-py-tgcalls==0.8.1rc1
+py-tgcalls
 requests
 aiohttp
 aiofiles
@@ -8,7 +8,6 @@ asyncio
 wget
 python-arq
 youtube-search-python==1.4.6
-youtube-search-python
 yt-dlp
 python-dotenv
 gTTS
