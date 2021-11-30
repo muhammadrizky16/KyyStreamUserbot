@@ -30,18 +30,18 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@Client.on_message(filters.command(["ping"], prefixes=f"{HNDLR}"))
-async def ping(client, m: Message):
-    await m.delete()
-    start = time()
-    current_time = datetime.utcnow()
-    m_reply = await m.reply_text("⚡")
-    delta_ping = time() - start
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-    await m_reply.edit(
-        f"<b>🏓 PONG</b> `{delta_ping * 1000:.3f} ms` \n<b>⏳ AKTIF</b> - `{uptime}`"
-    )
+#@Client.on_message(filters.command(["ping"], prefixes=f"{HNDLR}"))
+#async def ping(client, m: Message):
+#    await m.delete()
+#    start = time()
+#    current_time = datetime.utcnow()
+#    m_reply = await m.reply_text("⚡")
+#    delta_ping = time() - start
+#    uptime_sec = (current_time - START_TIME).total_seconds()
+#    uptime = await _human_time_duration(int(uptime_sec))
+#    await m_reply.edit(
+#        f"<b>🏓 PONG</b> `{delta_ping * 1000:.3f} ms` \n<b>⏳ AKTIF</b> - `{uptime}`"
+#    )
 
 
 @Client.on_message(
@@ -49,15 +49,15 @@ async def ping(client, m: Message):
 )
 async def restart(client, m: Message):
     await m.delete()
-    loli = await m.reply("1")
-    await loli.edit("2")
-    await loli.edit("3")
-    await loli.edit("4")
-    await loli.edit("5")
-    await loli.edit("6")
-    await loli.edit("7")
-    await loli.edit("8")
-    await loli.edit("9")
+    loli = await m.reply("APE LU")
+    await loli.edit("TUNGGU BENTAR YA BANGSAT")
+    await loli.edit("GUA CUMAN RESTART")
+    await loli.edit("BENTARAN DOANG KOK")
+    await loli.edit("KALAU GA SABAR")
+    await loli.edit("MATI AJA GAPAPA")
+    await loli.edit("ANEH BAT LU ")
+    await loli.edit("DAH TOD GUA MAU RESTART DLU")
+    await loli.edit("BYE")
     await loli.edit("**✅ Userbot Di Mulai Ulang**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
@@ -72,52 +72,18 @@ async def help(client, m: Message):
 🛠 MENU BANTUAN
 
 ⚡ PERINTAH UNTUK SEMUA ORANG
-• {HNDLR}play [judul lagu | link youtube | balas file audio] - untuk memutar lagu
 • {HNDLR}vplay [judul video | link youtube | balas file video] - untuk memutar video
 • {HNDLR}playlist untuk melihat daftar putar
-• {HNDLR}ping - untuk cek status
 • {HNDLR}help - untuk melihat daftar perintah
 
 ⚡ PERINTAH UNTUK SEMUA ADMIN
-• {HNDLR}resume - untuk melanjutkan pemutaran lagu atau video
-• {HNDLR}pause - untuk untuk menjeda pemutaran lagu atau video
-• {HNDLR}skip - untuk melewati lagu atau video
-• {HNDLR}end - untuk mengakhiri pemutaran</b>
+• {HNDLR}vresume - untuk melanjutkan pemutaran Video
+• {HNDLR}vpause - untuk untuk menjeda pemutaran Video
+• {HNDLR}vskip - untuk melewati lagu atau Video
+• {HNDLR}vend - untuk mengakhiri pemutaran</b>
 """
     await m.reply(HELP)
 
-
-@Client.on_message(filters.command(["repo"], prefixes=f"{HNDLR}"))
-async def repo(client, m: Message):
-    await m.delete()
-    REPO = f"""
-<b>👋 Hi! {m.from_user.mention}!
-
-🎶 Music Dan Video Player UserBot
-
-🤖 Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.
-
-✨ Supported by: 
-• [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
-• [Pyrogram](https://github.com/pyrogram/pyrogram)
-
-🛠 Help Menu
-
-⚡ PERINTAH UNTUK SEMUA ORANG
-• `/play [judul lagu | link youtube | balas file audio]` - untuk memutar lagu
-• `/vplay [judul video | link youtube | balas file video]` - untuk memutar video
-• `/playlist` untuk melihat daftar putar
-• `/ping` - untuk cek status
-• `/help` - untuk melihat daftar perintah
-
-⚡ PERINTAH UNTUK SEMUA ADMIN
-• `/resume` - untuk melanjutkan pemutaran lagu atau video
-• `/pause` - untuk untuk menjeda pemutaran lagu atau video
-• `/skip` - untuk melewati lagu atau video
-• `/end` - untuk mengakhiri pemutaran
-
-🔥 Deployment
-• [Heroku](https://github.com/zxcskyy)
 
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["sysinfo"], prefixes=f"{HNDLR}")
