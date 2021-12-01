@@ -1,11 +1,11 @@
 
 ## 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zxcskyy/VideoStreamUserbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/muhammadrizky16/KyyStreamUserbot)
 
 ## KALAU NGEFORK JANGAN LUPA KASI STARNYA YA ANJG 
  
-## Testi Bot [VIEENA ROBOT](https://t.me/vieenarobot)
+## Testi Bot [Nasty Music](https://t.me/Nastymusiicbot)
 
 ## Credit
 • [KYY](t.me/zxcskyy)
