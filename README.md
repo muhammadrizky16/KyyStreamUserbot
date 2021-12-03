@@ -8,4 +8,5 @@
 ## Testi Bot [Nasty Music](https://t.me/Nastymusiicbot)
 
 ## Credit
-• [KYY](t.me/zxcskyy)
+[KYY](https://t.me/zxcskyy)
+
