@@ -157,6 +157,3 @@ async def repo(client, m: Message):
 • [Kyy](https://github.com/zxcskyy)</b>
 """
     await m.reply(REPO, disable_web_page_preview=True)
-
-
-
