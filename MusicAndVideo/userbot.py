@@ -69,11 +69,11 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 Hallo {m.from_user.mention}!
 
-🛠 MENU BANTUAN
+🛠 MENU BANTUAN UNTUK VIDEO STREAM
 
 ⚡ PERINTAH UNTUK SEMUA ORANG
 • {HNDLR}vplay [judul video | link youtube | balas file video] - untuk memutar video
-• {HNDLR}playlist untuk melihat daftar putar
+• {HNDLR}vplaylist untuk melihat daftar putar di video stream
 • {HNDLR}help - untuk melihat daftar perintah
 
 ⚡ PERINTAH UNTUK SEMUA ADMIN
