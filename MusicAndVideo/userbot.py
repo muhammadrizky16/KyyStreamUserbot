@@ -118,4 +118,45 @@ Perintah pengguna sudo:
     await m.reply(HELP)
 
 
+Client.on_message(filters.command(["repo"], prefixes=f"{HNDLR}"))
+async def repo(client, m: Message):
+    await m.delete()
+    REPO = f"""
+<b>👋 Hallo {m.from_user.mention}!
+
+🗃️ Music Dan Video Player UserBot
+
+🔰 Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.
+
+👩‍💻 Dipersembahkan Oleh 
+• [Nasty Support ](https://t.me/NastySupportt)
+• [Vieena Support ](http://t.me/vieenasupport)
+
+
+📝 Persyaratan
+• Python 3.8+
+• FFMPEG
+• Nodejs v16+
+
+
+🦹🏻 Deployment Userbot
+💜 Heroku
+
+ [𝗗𝗘𝗣𝗟𝗢𝗬 𝗞𝗘 𝗛𝗘𝗥𝗢𝗞𝗨](https://heroku.com/deploy?template=https://github.com/muhammadrizky16/KyyStreamUserbot)
+
+📝 Variabel Yang Dibutuhkan
+• `API_ID` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
+• `API_HASH` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
+• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://replit.com/@fjgaming212/StringSession#main.py)
+• `SUDO_USER` - ID Akun Telegram Yang Digunakan Sebagai Admin
+• `HNDLR` - Handler untuk menjalankan userbot mu
+
+
+❤️‍🔥 KREDIT DEVOLOPER
+• [Kyy](https://github.com/muhammadrizky16)
+• [Kyy](https://github.com/zxcskyy)</b>
+"""
+    await m.reply(REPO, disable_web_page_preview=True)
+
+
 
