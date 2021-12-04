@@ -69,18 +69,51 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 Hallo {m.from_user.mention}!
 
-🛠 MENU BANTUAN UNTUK VIDEO STREAM
+📝 DAFTAR PERINTAH MUSIC PLAYER 📝
+💡 UNTUK SEMUA ANGGOTA GRUP 💡
+• {HNDLR}play (judul lagu) - untuk memutar lagu yang anda inginkan 
+• {HNDLR}play (balas ke audio file) - untuk memutar lagu yang di minta melalui audio yang dibalas
+• {HNDLR}play (link youtube) - untuk memutar lagu yang di minta melalui url youtube
+• {HNDLR}song (judul lagu) - untuk mendownload lagu
 
-⚡ PERINTAH UNTUK SEMUA ORANG
-• {HNDLR}vplay [judul video | link youtube | balas file video] - untuk memutar video
-• {HNDLR}vplaylist untuk melihat daftar putar di video stream
-• {HNDLR}help - untuk melihat daftar perintah
+💡 UNTUK SEMUA ADMIN GRUP 💡
+• {HNDLR}pause - untuk menjeda pemutaran
+• {HNDLR}resume - untuk melanjutkan pemutaran
+• {HNDLR}end - untuk menghentikan pemutaran
+• {HNDLR}skip - untuk memutar lagu berikutnya yang ada didalam antrian
 
-⚡ PERINTAH UNTUK SEMUA ADMIN
-• {HNDLR}vresume - untuk melanjutkan pemutaran Video
-• {HNDLR}vpause - untuk untuk menjeda pemutaran Video
-• {HNDLR}vskip - untuk melewati lagu atau Video
-• {HNDLR}vend - untuk mengakhiri pemutaran</b>
+📝 DAFTAR PERINTAH VIDEO PLAYER 📝
+💡 UNTUK SEMUA ANGGOTA GRUP 💡
+• {HNDLR}vplay (judul video) - untuk memutar video yang anda inginkan 
+• {HNDLR}vplay (balas ke video file) - untuk memutar video yang di minta melalui audio yang dibalas
+• {HNDLR}vplay (link youtube) - untuk memutar video yang di minta melalui url youtube
+• {HNDLR}vsong (judul video) - untuk mendownload video
+
+💡 UNTUK SEMUA ADMIN GRUP 💡
+• {HNDLR}vpause - untuk menjeda pemutaran
+• {HNDLR}vresume - untuk melanjutkan pemutaran
+• {HNDLR}vstop - untuk menghentikan pemutaran
+• {HNDLR}vskip - untuk memutar video berikutnya yang ada didalam antrian
+
+💡SUDO USERS COMMANDS 💡
+Perintah pengguna sudo:
+• {HNDLR}clean -> Membersihkan file temp.
+• {HNDLR}restartMusic -> Restart musik.
+• {HNDLR}block -> blokir pengguna dari menggunakan musik.
+• {HNDLR}unblock -> Buka blokir pengguna yang diblokir dari menggunakan musik.
+• {HNDLR}eval or /sh -> dapatkan akses utama musik.
+• {HNDLR}joinassistant -> Assistant akan bergabung dengan grup obrolan.
+• {HNDLR}leavebot -> MusicBot akan meninggalkan grup obrolan yang diberikan.
+• {HNDLR}leaveassistant -> assistant akan meninggalkan grup obrolan.
+• {HNDLR}blacklistchat -> Daftar hitam Obrolan dari menggunakan musik.
+• {HNDLR}whitelistchat -> WhiteList obrolan.
+• {HNDLR}karmaon atau /karmaoff -> Mengaktifkan atau menonaktifkan fungsi karma.
+• {HNDLR}speedteston atau /speedtestoff -> Mengaktifkan atau menonaktifkan fungsi speedtest.
+• {HNDLR}update -> Pembaruan musik.
+• {HNDLR}broadcast -> Broadcast pesan di semua obrolan musik yang disajikan.
+
+
+• Jika Terjadi Kesalahan Silahkan Hubungi Saya @IDnyaKosong Selamat Bermusik</b>
 """
     await m.reply(HELP)
 
