@@ -147,7 +147,7 @@ async def repo(client, m: Message):
 📝 Variabel Yang Dibutuhkan
 • `API_ID` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
 • `API_HASH` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://replit.com/@fjgaming212/StringSession#main.py)
+• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://replit.com/@rizkyhmdanii16/StringSession)
 • `SUDO_USER` - ID Akun Telegram Yang Digunakan Sebagai Admin
 • `HNDLR` - Handler untuk menjalankan userbot mu
 
