@@ -1,4 +1,6 @@
 from pyrogram.raw.base import Update
+from pytgcalls import PyTgCalls
+from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import (
     HighQualityAudio,
@@ -8,7 +10,7 @@ from pytgcalls.types.input_stream.quality import (
 )
 from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 
-from config import bot, call_py
+from config import call_py
 from MusicAndVideo.helpers.queues import QUEUE, clear_queue, get_queue, pop_an_item
 
 
@@ -68,14 +70,13 @@ async def on_end_handler(_, update: Update):
     if isinstance(update, StreamAudioEnded) or isinstance(update, StreamVideoEnded):
         chat_id = update.chat_id
         print(chat_id)
-        op = await skip_current_song(chat_id)
-        if op == 0:
-            await bot.send_message(
-                chat_id, "**Antrian Kosong, Meninggalkan Obrolan Suara**"
-            )
-        else:
-            await bot.send_message(
-                chat_id,
-                f"**🎧 Sekarang Memutar** \n[{op[0]}]({op[1]}) | `{op[2]}`",
-                disable_web_page_preview=True,
-            )
+        await skip_current_song(chat_id)
+
+
+# Ketika seseorang mengakhiri Obrolan Suara tanpa menghentikan Pemutaran
+
+
+@call_py.on_closed_voice_chat()
+async def close_handler(client: PyTgCalls, chat_id: int):
+    if chat_id in QUEUE:
+        clear_queue(chat_id)
