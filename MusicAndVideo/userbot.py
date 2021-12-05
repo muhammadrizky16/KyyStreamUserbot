@@ -118,7 +118,7 @@ Perintah pengguna sudo:
     await m.reply(HELP)
 
 
-Client.on_message(filters.command(["repo"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["repo"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
