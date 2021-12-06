@@ -155,6 +155,6 @@ async def repo(client, m: Message):
 ❤️‍🔥 KREDIT DEVOLOPER
 • [Kyy](https://github.com/muhammadrizky16)
 • [Kyy](https://github.com/zxcskyy)
-• [Tomi](https://github.com/XtomiSN</b>
+• [Tomi](https://github.com/XtomiSN)</b>
 """
     await m.reply(REPO, disable_web_page_preview=True)
