@@ -1,4 +1,4 @@
-name: TOMI
+name: KYY
  
 on: [push, pull_request]
  
@@ -31,6 +31,6 @@ jobs:
           commit_message: '`something`'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: XtomiSN
-          commit_user_email: 90341045+XtomiSN@users.noreply.github.com
-          commit_author: XtomiSN <90341045+XtomiSN@users.noreply.github.com>
+          commit_user_name: muhammadrizky16
+          commit_user_email: 90341045+muhammadrizky16@users.noreply.github.com
+          commit_author: muhammadrizky16 <90341045+muhammadrizky16@users.noreply.github.com>
