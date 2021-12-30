@@ -16,7 +16,7 @@ from youtubesearchpython import VideosSearch
 from config import HNDLR, bot, call_py
 from MusicAndVideo.helpers.queues import QUEUE, add_to_queue, get_queue
 
-AMBILFOTO = ["https://telegra.ph/file/d1b37552917a932acf672.jpg"]
+AMBILFOTO = ["https://telegra.ph/file/452459601fcc0c6225196.jpg"]
 
 
 IMAGE_THUMBNAIL = random.choice(AMBILFOTO)
@@ -91,7 +91,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(filters.command(["mplay"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["play"], prefixes=f"{HNDLR}"))
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -376,7 +376,7 @@ async def playfrom(client, m: Message):
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@Client.on_message(filters.command(["vplaylist", "queue"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["playlist", "queue"], prefixes=f"{HNDLR}"))
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
