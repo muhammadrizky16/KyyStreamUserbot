@@ -11,6 +11,6 @@
  
 
 ## Credit
-- [KYY](https://t.me/zxcskyy)
+- [Zxcskyy](https://t.me/zxcskyy)
 - [Kyy](https://t.me/IDnyaKosong)
 - [Tomi](https://t.me/Tomi_sn)
