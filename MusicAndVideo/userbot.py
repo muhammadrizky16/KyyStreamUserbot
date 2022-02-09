@@ -95,23 +95,6 @@ async def help(client, m: Message):
 • {HNDLR}vstop - untuk menghentikan pemutaran
 • {HNDLR}vskip - untuk memutar video berikutnya yang ada didalam antrian
 
-💡SUDO USERS COMMANDS 💡
-Perintah pengguna sudo:
-• {HNDLR}clean -> Membersihkan file temp.
-• {HNDLR}restartMusic -> Restart musik.
-• {HNDLR}block -> blokir pengguna dari menggunakan musik.
-• {HNDLR}unblock -> Buka blokir pengguna yang diblokir dari menggunakan musik.
-• {HNDLR}eval or /sh -> dapatkan akses utama musik.
-• {HNDLR}joinassistant -> Assistant akan bergabung dengan grup obrolan.
-• {HNDLR}leavebot -> MusicBot akan meninggalkan grup obrolan yang diberikan.
-• {HNDLR}leaveassistant -> assistant akan meninggalkan grup obrolan.
-• {HNDLR}blacklistchat -> Daftar hitam Obrolan dari menggunakan musik.
-• {HNDLR}whitelistchat -> WhiteList obrolan.
-• {HNDLR}karmaon atau /karmaoff -> Mengaktifkan atau menonaktifkan fungsi karma.
-• {HNDLR}speedteston atau /speedtestoff -> Mengaktifkan atau menonaktifkan fungsi speedtest.
-• {HNDLR}update -> Pembaruan musik.
-• {HNDLR}broadcast -> Broadcast pesan di semua obrolan musik yang disajikan.
-
 
 • Jika Terjadi Kesalahan Silahkan Hubungi Saya @IDnyaKosong Selamat Bermusik</b>
 """
